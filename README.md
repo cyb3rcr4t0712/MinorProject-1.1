@@ -17,4 +17,4 @@ To run the SQL Injection Scanner locally, follow these steps:
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/sql-injection-scanner.git
+   git clone https://github.com/cyb3rcr4t0712/sql-injection-scanner.git
