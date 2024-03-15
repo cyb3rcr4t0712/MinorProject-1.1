@@ -1,20 +1,59 @@
 # MinorProject-1.1
 # SQL Injection Scanner
 
-SQL Injection Scanner is a web application built with Flask that allows users to input a website URL and scan it for SQL injection vulnerabilities. The application utilizes various SQL injection techniques to detect potential vulnerabilities and generates a report with the scan results.
+This is a simple SQL injection scanner built with Python and Flask, designed to identify potential SQL injection vulnerabilities in web applications.
 
 ## Features
 
-- Simple user interface for entering website URL and initiating the scanning process.
-- Detection of SQL injection vulnerabilities using boolean-based blind, time-based blind, error-based, UNION query-based, stacked queries, and out-of-band techniques.
-- Detailed scan report with a summary of alerts and alert details.
-- Support for customizing and extending SQL injection detection logic.
+- Detects various types of SQL injection attacks, including:
+  - Generic SQL Injection
+  - Error Based Injection
+  - Union Select Injection
+  - Authentication Bypass Injection
 
-## Getting Started
+- Uses a database to store and manage SQL injection payloads for testing.
 
-To run the SQL Injection Scanner locally, follow these steps:
+## Setup
 
-1. Clone this repository to your local machine:
+1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/cyb3rcr4t0712/sql-injection-scanner.git
+   git clone https://github.com/cyb3rcr4t0712/sql-injection-scanner.git```
+
+2. **Install Dependencies:**
+
+```pip install -r requirements.txt```
+
+3. **Configure Database:**
+- Choose a database management system (SQLite, MySQL, PostgreSQL, etc.).
+- Set up a database and configure the connection in `app.py`.
+
+4. **Run the Application:**
+   ``python app.py``
+
+## Usage
+
+1. **Scan URLs for SQL Injection:**
+- Send POST requests to `/scan` endpoint with JSON payload containing the URL to scan.
+- Example:
+  ```json
+  {
+      "url": "http://example.com/page.php?id=1"
+  }
+  ```
+
+2. **View Results:**
+- The scanner will return a JSON response containing any detected SQL injection vulnerabilities.
+
+## Contributing
+
+Contributions are welcome! If you'd like to improve this project, please fork the repository and submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Disclaimer
+
+This tool is for educational and testing purposes only. Use it responsibly and only on systems you have permission to test.
+
