@@ -1,27 +1,46 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vulnerability Scanner</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vulnerability Scanner</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script>
+    // JavaScript function to display pop-up
+    function displayPopup() {
+      var popup = document.getElementById("popup");
+      popup.style.display = "block";
+    }
+  </script>
 </head>
 <body>
-    <div id="hero">
-        <div class="navbar">
-            <div class="user">
-                <a href="#" class="home"><button type="button">Home</button></a>
-                <button type="button" class="about">About</button>
-                <button type="button" class="scan">Scan</button>
-            </div>
-        </div>
-        <div class="container">
-            <div class="info">
-                <h1>SQL Vulnerability Scanner</h1>
-                <p>A robust cybersecurity shield for web application</p>
-                <a href="#">Scan Now</a>
-            </div>
-        </div>
+  <div class="hero">
+    <video autoplay loop muted plays-inline class="bgvideo">
+      <source src="https://github.com/cyb3rcr4t0712/MinorProject-1.1/raw/1651c8a0a131167322a6dce7c3bfd1145c50a1dd/bg.mp4" type="video/mp4">    
+    </video>
+
+    <nav>
+  <img src="https://github.com/cyb3rcr4t0712/MinorProject-1.1/raw/1651c8a0a131167322a6dce7c3bfd1145c50a1dd/KIIT.png" class="logo">      
+        <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#" onclick="displayPopup()">ABOUT</a></li> <!-- Added onclick event -->
+        <li><a href="#">SCAN</a></li>
+      </ul>
+    </nav>
+    <div class="content">
+        <h1>Web Vulnerability Scanner</h1>
+        <p>A robust cybersecurity shield for web application</p>
+        <a href="#">Scan Now</a>
     </div>
+  </div>
+  
+  <!-- Popup Container -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="document.getElementById('popup').style.display='none'">&times;</span>
+      <h2>SQL Vulnerability Scanner</h2>
+      <p>Our SQL Vulnerability Scanner is an indispensable tool in safeguarding web applications against potential threats. By meticulously scanning for vulnerabilities such as SQL injection (SQLi), it serves as a frontline defense, identifying weaknesses that could otherwise compromise the security and integrity of your data. With its comprehensive approach and real-time scanning capabilities, our tool not only detects vulnerabilities but also provides actionable insights and recommendations for mitigation, empowering users to proactively fortify their web applications against cyberattacks. Whether you're a seasoned cybersecurity professional or a website owner concerned about protecting your online assets, our SQL Vulnerability Scanner offers peace of mind and assurance in an ever-evolving digital landscape.</p>
+    </div>
+  </div>
 </body>
 </html>
